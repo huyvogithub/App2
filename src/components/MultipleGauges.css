@@ -1,0 +1,31 @@
+.gauge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+}
+
+.small-gauge {
+    border: 1px solid #ccc;
+    padding: 40px; /* Tăng giá trị padding để tạo độ dày và canh giữa biểu đồ */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%; /* Điều chỉnh kích thước của biểu đồ */
+    height: 15%; /* Điều chỉnh kích thước của biểu đồ */
+}
+
+.gauge-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: #000;
+    margin: 0; /* Loại bỏ margin mặc định */
+}
+.gauge p {
+    font-size: 150%; /* Điều chỉnh kích thước chữ dưới gauge lớn hơn */
+    font-weight: bold;
+    color: #993939; /* Đổi màu chữ nếu cần */
+    margin: 0;
+}
