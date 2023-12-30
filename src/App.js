@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import UserList from './components/UserList';
-import ThreeDComponent from './components/ThreeDComponent';
+import EmbeddedDashboard from './components/EmbeddedDashboard';
 import SmallFrame from './components/SmallFrame';
 import GaussianGraph from './components/GaussianGraph';
 //import GET from './components/GET';
@@ -37,8 +37,8 @@ function App() {
         <div className={`user-list-container ${currentPage === 'userList' ? 'visible' : 'hidden'}`}>
           <UserList />
         </div>
-        <div className={`threejs-container ${currentPage === 'userList2' ? 'visible' : 'hidden'}`}>
-          <GaussianGraph />
+        <div className={`chartmongo-container ${currentPage === 'userList2' ? 'visible' : 'hidden'}`}>
+          <EmbeddedDashboard />
 
         </div>
         {currentPage === 'PAGE4' && (
@@ -54,7 +54,7 @@ function App() {
         <ul>
           <li onClick={() => handleMenuClick('form')}>NHẬP THÔNG TIN</li>
           <li onClick={() => handleMenuClick('userList')}>DANH SÁCH NGƯỜI DÙNG</li>
-          <li onClick={() => handleMenuClick('userList2')}>KHÁM BỆNH THÔNG SỐ</li> {/* Thêm mục mới */}
+          <li onClick={() => handleMenuClick('userList2')}>BIỂU ĐỒ THÔNG SỐ THEO THỜI GIAN</li> {/* Thêm mục mới */}
           <li onClick={() => handleMenuClick('PAGE4')}>MÔ PHỎNG CHUYỂN ĐỘNG</li>
         </ul>
       </aside>
