@@ -14,7 +14,7 @@ const UserList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-tqlme/endpoint/GET');
+      const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-byptt/endpoint/GET');
       setUserData(response.data);
       setError(null);
     } catch (error) {

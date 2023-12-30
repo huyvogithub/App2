@@ -21,7 +21,7 @@ const MultipleGauges = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-tqlme/endpoint/GETGAUSE');
+            const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-byptt/endpoint/GETGAUSE');
             const data = response.data;
             //const data = await response.json();
             const taytrai = data[0]?.public?.output?.jsonData?.taytrai_p;

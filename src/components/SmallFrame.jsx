@@ -90,7 +90,7 @@ const SmallFrame = () => {
 
 
                 async function fetchData() {
-                    fetch('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-tqlme/endpoint/GET_MOTION_API')
+                    fetch('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-byptt/endpoint/GET_MOTION_API')
                         .then(response => {
                             if (!response.ok) {
                                 throw new Error('Network response was not ok');
