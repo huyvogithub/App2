@@ -11,11 +11,12 @@ const UserList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [searching, setSearching] = useState(false);
-
+  const [additionalInfo, setAdditionalInfo] = useState({});
   const fetchData = async () => {
     try {
       const response = await axios.get('https://ap-southeast-1.aws.data.mongodb-api.com/app/data-byptt/endpoint/GET');
-      setUserData(response.data);
+      setUserData(response.data.input.jsonData);
+      setAdditionalInfo(response.data.output.jsonData);
       setError(null);
     } catch (error) {
       console.error('Lỗi khi lấy dữ liệu:', error);
@@ -107,11 +108,12 @@ const UserList = () => {
             <img src={MyImage} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ marginTop: '20px', textAlign: 'center' }}>
-            <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên người dùng:</strong> {userData[selectedUser]?.username}</p>
+            <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên bệnh nhân:</strong> {userData[selectedUser]?.username}</p>
             <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Giới tính:</strong> {userData[selectedUser]?.gender}</p>
             <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Chiều cao:</strong> {userData[selectedUser]?.height}</p>
             <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Cân nặng:</strong> {userData[selectedUser]?.weight}</p>
             <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Lịch sử bệnh:</strong> {userData[selectedUser]?.medicalHistory}</p>
+            <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Chỉ số BMI:</strong> {additionalInfo[selectedUser]?.BMI}</p>
             {showPassword && <p><strong style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Mật khẩu:</strong> {userData[selectedUser]?.password}</p>}
             <button onClick={handleBack} style={{ fontSize: '1.3em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Quay lại</button>
           </div>
@@ -140,7 +142,7 @@ const UserList = () => {
                   <img src={MyImage} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <p style={{ fontSize: '1.5em', fontWeight: 'bold', fontFamily: 'Times New Roman', marginTop: '10px' }}>Bệnh nhân số: {index + 1}</p>
-                <p><strong style={{ fontSize: '1.2em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên người dùng:</strong> {userData[username]?.username}</p>
+                <p><strong style={{ fontSize: '1.2em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên bệnh nhân:</strong> {userData[username]?.username}</p>
               </div>
             ))
           ) : (
@@ -165,7 +167,7 @@ const UserList = () => {
                   <img src={MyImage} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <p style={{ fontSize: '1.5em', fontWeight: 'bold', fontFamily: 'Times New Roman', marginTop: '10px' }}>Bệnh nhân số: {index + 1}</p>
-                <p><strong style={{ fontSize: '1.2em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên người dùng:</strong> {userData[username]?.username}</p>
+                <p><strong style={{ fontSize: '1.2em', fontWeight: 'bold', fontFamily: 'Times New Roman' }}>Tên bệnh nhân :</strong> {userData[username]?.username}</p>
               </div>
             ))
           )}

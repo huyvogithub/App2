@@ -37,7 +37,7 @@ main {
   background-position: center;
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
-  background-image: url('/public/logo192.png');
+  background-image: url('/src/components/benhnhan.jpg');
 }
 
 .user-list-container {
@@ -137,7 +137,7 @@ main {
 
 .chartmongo-container {
   width: 100%;
-  height: 150%;
+  height: 200%;
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -160,4 +160,23 @@ main {
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
   background-image: url('/public/yta.jpg');
+}
+.image-container {
+  width: 180px; /* Đổi kích thước theo nhu cầu */
+  height: 180px; /* Đổi kích thước theo nhu cầu */
+  overflow: hidden; /* Ẩn phần vượt quá khung container */
+  border: 0px solid #ccc; /* Viền khung ảnh */
+  border-radius: 0%; /* Bo tròn khung ảnh để tạo hình tròn */
+  margin-left: auto;
+  position: absolute; /* Đặt vị trí tuyệt đối */
+  top: 0px; /* Cách trên 10px từ phía trên của header */
+  right: 0px; /* Cách phải 10px từ phía phải của header */
+  bottom: 0px;
+  background-color: #d20c0c; /* Màu nền đỏ */
+}
+
+.avatar-image {
+  width: 100%; /* Kích thước hình ảnh sẽ đầy đủ trong container */
+  height: 100%; /* Kích thước hình ảnh sẽ đầy đủ trong container */
+  object-fit: cover; /* Hiển thị toàn bộ hình ảnh trong kích thước đã chỉ định */
 }

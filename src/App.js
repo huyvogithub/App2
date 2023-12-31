@@ -6,6 +6,7 @@ import UserList from './components/UserList';
 import EmbeddedDashboard from './components/EmbeddedDashboard';
 import SmallFrame from './components/SmallFrame';
 import GaussianGraph from './components/GaussianGraph';
+import MyImage from './components/logotdtu.png';
 //import GET from './components/GET';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
   };
   return (
     <div className="App">
+
       <header>
         <div className="menu-icon" onClick={toggleMenu}>
           <div className="menu-line" />
@@ -28,7 +30,10 @@ function App() {
           <div className="menu-line" />
           <div className="menu-line" />
         </div>
-        <h1 className="app-title">ỨNG DỤNG QUẢN LÝ BỆNH NHÂN CỦA HUY</h1>
+        <h1 className="app-title">A SIMULATION SYSTEM OF HUMAN MOTION - THE HAND PART</h1>
+        <div className="image-container">
+          <img src={MyImage} alt="Avatar" className="avatar-image" />
+        </div>
       </header>
       <main>
         <div className={`form-container ${currentPage === 'form' ? 'visible' : 'hidden'}`}>
