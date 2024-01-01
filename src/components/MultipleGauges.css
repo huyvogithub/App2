@@ -44,8 +44,3 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.enlarged-form {
-    max-width: 800px; /* Điều chỉnh kích thước của form */
-    margin: auto;
-    padding: 20px;
-  }

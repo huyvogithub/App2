@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Gauge from 'react-gauge-component';
 import './MultipleGauges.css'; // Import file CSS
-import HandParamsForm from './HandParamsForm';
+import DraggableSquare from './DraggableSquare';
 import axios from 'axios';
 //
 
@@ -41,11 +41,9 @@ const MultipleGauges = () => {
     return (
         <div className="outer-container">
             <div className="enlarged-form">
-                <HandParamsForm />
+                <DraggableSquare />
             </div>
-
             <div className="gauge-grid">
-
                 <GaugeWithData name="TAY TRÁI" value={gaugesData.taytrai} unit="RAD" />
                 <GaugeWithData name="TAY PHẢI" value={gaugesData.tayphai} unit="RAD" />
                 <GaugeWithData name="CẲNG TAY TRÁI" value={gaugesData.cangtaytrai} unit="RAD" />

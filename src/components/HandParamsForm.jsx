@@ -9,10 +9,10 @@ const handParamsSchema = {
     type: 'object',
     required: ['taytrai', 'tayphai', 'cangtaytrai', 'cangtayphai'],
     properties: {
-        taytrai: { type: 'number', title: 'TAY TRÁI' },
-        tayphai: { type: 'number', title: 'TAY PHẢI' },
-        cangtaytrai: { type: 'number', title: 'CẲNG TAY TRÁI' },
-        cangtayphai: { type: 'number', title: 'CẲNG TAY PHẢI' },
+        taytrai: { type: 'number', title: 'TAY TRÁI (RAD)' },
+        tayphai: { type: 'number', title: 'TAY PHẢI (RAD)' },
+        cangtaytrai: { type: 'number', title: 'CẲNG TAY TRÁI (RAD)' },
+        cangtayphai: { type: 'number', title: 'CẲNG TAY PHẢI (RAD)' },
     },
 };
 
