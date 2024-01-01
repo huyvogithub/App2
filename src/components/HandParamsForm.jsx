@@ -29,7 +29,7 @@ const HandParamsForm = () => {
             );
 
             console.log('Kết quả từ server:', response.data);
-            alert('DỮ LIỆU ĐÃ ĐƯỢC LƯU LẠI. CẢM ƠN BẠN ĐÃ SỬ DỤNG');
+            alert('DỮ LIỆU VỊ TRÍ ĐÃ LƯU VUI LÒNG QUAN SÁT MÔ HÌNH MÔ PHỎNG 3D');
             // Reset form sau khi submit thành công
             setFormData({});
         } catch (error) {
