@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Gauge from 'react-gauge-component';
 import './MultipleGauges.css'; // Import file CSS
+import HandParamsForm from './HandParamsForm';
 import axios from 'axios';
 //
 
@@ -38,14 +39,21 @@ const MultipleGauges = () => {
     };
 
     return (
-        <div className="gauge-grid">
-            <GaugeWithData name="TAY TRÁI" value={gaugesData.taytrai} unit="RAD" />
-            <GaugeWithData name="TAY PHẢI" value={gaugesData.tayphai} unit="RAD" />
-            <GaugeWithData name="CẲNG TAY TRÁI" value={gaugesData.cangtaytrai} unit="RAD" />
-            <GaugeWithData name="CẲNG TAY PHẢI" value={gaugesData.cangtayphai} unit="RAD" />
-            <GaugeWithData name="NHỊP TIM" value={gaugesData.nhiptim} unit="HPM" />
-            <GaugeWithData name="SPO2" value={gaugesData.spo2} unit="%" />
-            <GaugeWithData name="LỰC NẮM TAY" value={gaugesData.lucnamcv} unit="Hgram" />
+        <div className="outer-container">
+            <div className="enlarged-form">
+                <HandParamsForm />
+            </div>
+
+            <div className="gauge-grid">
+
+                <GaugeWithData name="TAY TRÁI" value={gaugesData.taytrai} unit="RAD" />
+                <GaugeWithData name="TAY PHẢI" value={gaugesData.tayphai} unit="RAD" />
+                <GaugeWithData name="CẲNG TAY TRÁI" value={gaugesData.cangtaytrai} unit="RAD" />
+                <GaugeWithData name="CẲNG TAY PHẢI" value={gaugesData.cangtayphai} unit="RAD" />
+                <GaugeWithData name="NHỊP TIM" value={gaugesData.nhiptim} unit="HPM" />
+                <GaugeWithData name="SPO2" value={gaugesData.spo2} unit="%" />
+                <GaugeWithData name="LỰC NẮM TAY" value={gaugesData.lucnamcv} unit="Hgram" />
+            </div>
         </div>
     );
 };

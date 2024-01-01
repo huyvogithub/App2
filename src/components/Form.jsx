@@ -18,20 +18,8 @@ const initialSchema = {
   },
 };
 
-const additionalSchema = {
-  title: 'THÔNG TIN THÊM',
-  type: 'object',
-  required: ['heartRate', 'spo2', 'gripStrength'],
-  properties: {
-    heartRate: { type: 'number', title: 'Nhịp tim' },
-    spo2: { type: 'number', title: 'SpO2' },
-    gripStrength: { type: 'number', title: 'Lực nắm' },
-  },
-};
-
 const UserLogin = () => {
   const [formData, setFormData] = useState({});
-  const [showAdditionalForm, setShowAdditionalForm] = useState(false);
   const [submitCount, setSubmitCount] = useState(0);
 
   const handleSubmit = async ({ formData }) => {
@@ -48,58 +36,20 @@ const UserLogin = () => {
       // Reset form sau khi submit thành công
       setFormData({});
       setSubmitCount(submitCount + 1);
-
-      // Hiển thị form mới sau khi gửi dữ liệu thành công
-      setShowAdditionalForm(true);
     } catch (error) {
       console.error('Lỗi khi gửi dữ liệu:', error);
     }
   };
 
-  const handleAdditionalSubmit = async ({ formData }) => {
-    try {
-      console.log('Dữ liệu gửi đi (Additional):', formData);
-
-      const response = await axios.post(
-        'https://ap-southeast-1.aws.data.mongodb-api.com/app/data-tqlme/endpoint/POST_JSON_BACKEND',
-        formData
-      );
-
-      console.log('Kết quả từ server (Additional):', response.data);
-
-      // Reset form sau khi submit thành công
-      setShowAdditionalForm({});
-      setFormData(true);
-    } catch (error) {
-      console.error('Lỗi khi gửi dữ liệu (Additional):', error);
-    }
-  };
-
-
-
-
-
-
-
   return (
     <div className="auth-form-container">
-      {submitCount % 2 === 0 ? (
-        <Form
-          schema={initialSchema}
-          validator={validator}
-          formData={formData}
-          onChange={({ formData }) => setFormData(formData)}
-          onSubmit={handleSubmit}
-        />
-      ) : (
-        <Form
-          schema={additionalSchema}
-          validator={validator}
-          formData={showAdditionalForm}
-          onChange={({ formData }) => setShowAdditionalForm(formData)}
-          onSubmit={handleAdditionalSubmit}
-        />
-      )}
+      <Form
+        schema={initialSchema}
+        validator={validator}
+        formData={formData}
+        onChange={({ formData }) => setFormData(formData)}
+        onSubmit={handleSubmit}
+      />
     </div>
   );
 };
