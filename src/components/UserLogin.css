@@ -43,3 +43,6 @@ button {
 button:hover {
   background-color: #4fa3d1;
 }
+.delete-form-container-right {
+  margin-left: 20px; /* Điều chỉnh khoảng cách giữa form và nút */
+}
