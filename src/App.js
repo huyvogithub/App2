@@ -6,7 +6,7 @@ import UserList from './components/UserList';
 import EmbeddedDashboard from './components/EmbeddedDashboard';
 import SmallFrame from './components/SmallFrame';
 import GaussianGraph from './components/GaussianGraph';
-
+import Search from './components/Search';
 
 import MyImage from './components/logotdtu.png';
 //import GET from './components/GET';
@@ -44,6 +44,7 @@ function App() {
 
         </div>
         <div className={`user-list-container ${currentPage === 'userList' ? 'visible' : 'hidden'}`}>
+          <Search />
           <UserList />
         </div>
         <div className={`chartmongo-container ${currentPage === 'userList2' ? 'visible' : 'hidden'}`}>
