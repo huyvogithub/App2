@@ -37,7 +37,7 @@ main {
   background-position: center;
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
-  background-image: url('/src/components/benhnhan.jpg');
+  
 }
 
 .user-list-container {
@@ -51,7 +51,7 @@ main {
   background-position: center;
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
-  background-image: url('/public/yta.jpg');
+  
 }
 
 /* CSS cho thanh menu */
@@ -146,7 +146,7 @@ main {
   background-position: center;
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
-  background-image: url('/public/yta.jpg');
+  
 }
 .graph-container {
   width: 100%;
@@ -159,7 +159,7 @@ main {
   background-position: center;
   position: relative;
   transition: transform 0.3s, opacity 0.3s;
-  background-image: url('/public/yta.jpg');
+  
 }
 .image-container {
   width: 180px; /* Đổi kích thước theo nhu cầu */

@@ -7,8 +7,9 @@ import EmbeddedDashboard from './components/EmbeddedDashboard';
 import SmallFrame from './components/SmallFrame';
 import GaussianGraph from './components/GaussianGraph';
 import Search from './components/Search';
-
+import ThreeJSComponent from './components/ThreeJSComponent';
 import MyImage from './components/logotdtu.png';
+import TETS from './components/tets';
 //import GET from './components/GET';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +54,7 @@ function App() {
         </div>
         {currentPage === 'PAGE4' && (
           <div className="user-list-container">
-            <GaussianGraph />
+            <TETS />
             <SmallFrame />
           </div>
 
