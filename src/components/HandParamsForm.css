@@ -21,7 +21,7 @@
   .hand-params-form-container input {
     width: calc(100% - 10px); /* Điều chỉnh độ rộng của input */
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10px;
+    font-size: 20px;
     padding: 10px;
     margin-bottom: 10px; /* Tạo khoảng cách dưới giữa các ô nhập */
     box-sizing: border-box;
@@ -32,7 +32,7 @@
     width: 50%;
     padding: 12px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10px;
+    font-size: 20px;
     box-sizing: border-box;
     margin-top: 10px; /* Khoảng cách từ nút Submit đến các ô nhập */
   }

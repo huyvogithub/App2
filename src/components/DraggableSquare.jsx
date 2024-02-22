@@ -10,7 +10,7 @@ const DraggableSquare = () => {
                     width: '500px',
                     height: '500px',
                     background: 'white',
-                    border: '1px solid #ccc',
+                    border: '4px solid #ccc',
                     borderRadius: '4px',
                     cursor: 'move',
                     display: 'flex',
