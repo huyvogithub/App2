@@ -24,7 +24,7 @@ const MultipleGauges = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             fetchData();
-        }, 100);
+        }, 200);
 
         return () => clearInterval(interval);
     }, []);

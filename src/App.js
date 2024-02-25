@@ -51,11 +51,13 @@ function App() {
         <div className={`chartmongo-container ${currentPage === 'userList2' ? 'visible' : 'hidden'}`}>
           <EmbeddedDashboard />
 
+
         </div>
         {currentPage === 'PAGE4' && (
           <div className="user-list-container">
             <TETS />
             <SmallFrame />
+
           </div>
 
         )}

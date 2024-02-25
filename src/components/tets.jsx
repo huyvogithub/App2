@@ -64,6 +64,44 @@ const App = () => {
         }
     };
 
+
+    //
+    const getNhiptimStatus = () => {
+        if (gaugesData.nhiptim <= 0) {
+            return 'Chưa phát hiện được nhịp tim';
+        } else if (gaugesData.nhiptim > 0 && gaugesData.nhiptim < 70) {
+            return 'Nhịp tim thấp';
+        } else if (gaugesData.nhiptim >= 70 && gaugesData.nhiptim < 140) {
+            return 'Nhịp tim bình thường';
+        } else {
+            return 'Nhịp tim cao';
+        }
+    };
+
+    const getSpo2Status = () => {
+        if (gaugesData.spo2 <= 0) {
+            return 'Chưa phát hiện SPO2';
+        } else if (gaugesData.spo2 < 95) {
+            return 'Spo2 thấp';
+        } else {
+            return 'SPO2 bình thường';
+        }
+    };
+
+    const getLucnamcvStatus = () => {
+        if (gaugesData.lucnamcv <= 0) {
+            return 'Chưa phát hiện lực nắm';
+        } else if (gaugesData.lucnamcv > 0 && gaugesData.lucnamcv < 200) {
+            return 'Lực nắm thấp';
+        } else {
+            return 'Lực nắm bình thường';
+        }
+    };
+
+    // 
+
+
+
     return (
         <div>
             <div className="enlarged-form">
@@ -133,6 +171,17 @@ const App = () => {
                         unit="Hgram"
                     />
                 </div>
+                {/* Hiển thị thông tin nhịp tim, tỉ lệ oxi trong máu, và lực nắm tay */}
+                <div style={{ textAlign: 'center', border: '10px solid #ccc', padding: '10px', position: 'relative' }}>
+                    <h2 style={{ fontSize: '1.5em', fontWeight: 'bold', marginTop: '0px' }}>STATUS</h2>
+                    <div>
+                        <p style={{ fontSize: '1.8em', fontWeight: 'bold', color: 'red', fontFamily: 'Times New Roman' }}>{getNhiptimStatus()}</p>
+                        <p style={{ fontSize: '1.8em', fontWeight: 'bold', color: 'red', fontFamily: 'Times New Roman' }}>{getSpo2Status()}</p>
+                        <p style={{ fontSize: '1.8em', fontWeight: 'bold', color: 'red', fontFamily: 'Times New Roman' }}>{getLucnamcvStatus()}</p>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     );
